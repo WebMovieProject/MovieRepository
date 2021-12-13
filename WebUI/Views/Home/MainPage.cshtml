@@ -1,0 +1,416 @@
+@{
+
+  Layout = null;
+}
+@model dynamic
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nurlanla Film Izle</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="~/film/Style/main.css">
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+
+  <header>
+    <div class="video-menu">
+
+
+      <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+        <a class="navbar-brand" href="#"><span class="navLink">Ana Sayfa</span></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item ">
+              <a class="nav-link" href="#"><span class="navLink">Hakkımızda</span> </a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="#"><span class="navLink">İletişim</span> </a>
+            </li>
+
+
+          </ul>
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#"> <span class="navLink">Yeni Filmler</span> </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><span class="navLink">Yerli</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><span class="navLink">Retro</span></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle-black" href="#" id="navbarDropdown" role="button"
+                data-toggle="dropdown" aria-expanded="false">
+                <span class="navLink"> Kategoriyalar <i class="fas fa-caret-down"></i></span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Korku</a>
+                <a class="dropdown-item" href="#">Aksiyon</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+          </ul>
+          
+          <form class="form-inline my-2 my-lg-0" asp-controller="Home" asp-action="MainPage">
+            @* <input class="form-control mr-sm-2" type="search" id="search" placeholder="Search" aria-label="Search"> *@
+            @Html.TextBox("par")
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">SEARCH</button>
+          </form>
+        </div>
+      </nav>
+    </div>
+
+    <video autoplay muted loop id="myVideo">
+      <source src="~/film/Source/video/Intro _ _Imriddle Film_ _ Cinema 4D _ 1440p.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+
+    </video>
+
+
+
+
+  </header>
+
+  @* jnknjnjnjk<section>nkkkkkkkkkkkkkkkkkkkkkkkkkknk *@
+
+
+
+
+
+
+  
+  <section class="row">
+@foreach (var item in Model.List1)
+{
+        <br>
+
+
+    <div>
+
+      <div class="card" style="width: 18rem;">
+        <img src="@item.Poster" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title text-center">@item.Title</h5>
+          <p class="card-text text-center"></p>
+
+          <p class="text-center">Tür: @item.Type
+            </p>
+          <div class="date-imdb">
+            <p>Yıl:@item.Year</p>
+          </div>
+
+        </div>
+      </div>
+
+
+    </div>
+
+    <br>
+}
+  </section>
+
+
+
+
+
+
+
+  @* jnknjnjnjknkkkkkkkkkkkkkkkkkkkkkkkkkknk *@
+
+  <section style="background-image: url(~/film/img1.jpg)!important;" class="sec-1">
+    <div class="text-center">
+
+      <br>
+      <br>
+      <div class="container">
+        <h2 class="reg-h text-center">Film keyfi NurlanTV'de</h2>
+        <br>
+        <br>
+        <h4 class="offset-3 reg-h col-6">NurlanTv'ye özel filmler , festival filmleri ve daha fazlası şimdi NurlanTv'de
+        </h4>
+        <br>
+        <div class="text-center">
+          <button class="reg-btn">Hemen üye ol</button>
+        </div>
+        <br>
+      </div>
+      y
+    </div>
+
+  </section>
+
+
+  <section class="sec-2">
+    <br>
+    <br>
+    <h1 class="text-center head-text">Filmler ve Diziler</h1>
+    <br>
+
+    <div class="container poster">
+
+      <div class="row">
+        <br>
+        <div class=" sec-22 col-12 col-lg-4">
+          <div class="card" style="width: 18rem;">
+            <img src="~/film/Source/img/612e2f9e866ac31dfc177972.jfif" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title text-center">Loving Vincent</h5>
+              <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk
+                of the card's content.</p>
+
+              <p class="text-center">Yazar :
+                Dorota Kobiela</p>
+              <p class="text-center">Yapımcı :
+                Omar Gurban</p>
+
+              <div class="date-imdb">
+                <p>Yıl: 2017</p>
+                <p>IMDB: 7.8/10</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class=" sec-22 col-12 col-lg-4">
+          <div class="card" style="width: 18rem;">
+            <img src="~/film/Source/img/612e2f9e866ac31dfc177972.jfif" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title text-center">Loving Vincent</h5>
+              <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk
+                of the card's content.</p>
+
+              <p class="text-center">Yazar :
+                Dorota Kobiela</p>
+              <p class="text-center">Yapımcı :
+                Omar Gurban</p>
+
+              <div class="date-imdb">
+                <p>Yıl: 2017</p>
+                <p>IMDB: 7.8/10</p>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+        <div class=" sec-22 col-12 col-lg-4">
+
+          <div class="card" style="width: 18rem;">
+            <img src="~/film/Source/img/612e2f9e866ac31dfc177972.jfif" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title text-center">Loving Vincent</h5>
+              <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk
+                of the card's content.</p>
+
+              <p class="text-center">Yazar :
+                Dorota Kobiela</p>
+              <p class="text-center">Yapımcı :
+                Omar Gurban</p>
+
+              <div class="date-imdb">
+                <p>Yıl: 2017</p>
+                <p>IMDB: 7.8/10</p>
+              </div>
+
+            </div>
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </div>
+    <br>
+    <br>
+  </section>
+
+
+
+  <section class="sec-3"> <br>
+    <br>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+ 
+      @{
+        foreach (var item in Model.List2)
+        {
+            <div class="swiper-slide">
+          <img src="@item.Poster" />
+        </div>
+        
+        }
+      }
+        
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+  <br>
+  <br>
+
+  <button onclick="topFunction()" id="myBtn" class="top"><i class="fas fa-arrow-up"></i></button>
+
+
+  <!-- Footer -->
+  <footer class="text-center text-lg-start  text-muted" style="background-color: blanchedalmond;">
+    <!-- Section: Social media -->
+    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+      <!-- Left -->
+      <div class="me-5 d-none d-lg-block">
+        <span>Get connected with us on social networks:</span>
+      </div>
+      <!-- Left -->
+
+      <!-- Right -->
+      <div>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-google"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <!-- Right -->
+    </section>
+    <!-- Section: Social media -->
+
+    <!-- Section: Links  -->
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              <i class="fas fa-gem me-3"></i>Company name
+            </h6>
+            <p>
+              Here you can use rows and columns to organize your footer content. Lorem ipsum
+              dolor sit amet, consectetur adipisicing elit.
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Products
+            </h6>
+            <p>
+              <a href="#!" class="text-reset">Angular</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">React</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Vue</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Laravel</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Useful links
+            </h6>
+            <p>
+              <a href="#!" class="text-reset">Pricing</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Settings</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Orders</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Help</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Contact
+            </h6>
+            <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+            <p>
+              <i class="fas fa-envelope me-3"></i>
+              info@example.com
+            </p>
+            <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+            <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+
+    <!-- Copyright -->
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+      © 2021 Copyright:
+      <a class="text-reset fw-bold" href="#">NurlanTV</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <script src="~/film/Script/script.js"></script>
+
+  <script src="https://kit.fontawesome.com/ee1296833e.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
