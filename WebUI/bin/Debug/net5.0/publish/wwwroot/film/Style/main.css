@@ -1,0 +1,159 @@
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #081329!important;
+}
+video {
+    width: 100%;
+    height: 100vh;
+    -o-object-fit: fill;
+       object-fit: fill;
+  }
+
+  header{
+      position: relative;
+      height: 99vh;
+  }
+  .video-menu{
+      position: absolute;
+      width: 100%;
+      z-index: 4;
+      color: white!important;
+      
+  }
+  .navLink{
+      color: white!important;
+      font-size: 20px;
+  }
+
+  .dropdown:hover >.dropdown-menu{
+    display: block;
+}
+
+.sec-1{
+    background-size: cover;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sec-22{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.reg-h{
+    color: white;
+    font-size: 28px;
+    text-shadow: 4px 2px saddlebrown;
+}
+
+.reg-btn{
+    width: 200px;
+    font-size: 24px;
+    background-color: transparent;
+    color: white;
+    text-shadow: 4px 2px saddlebrown;
+    border: 3px solid #c92020;
+    border-radius: 50px;
+    transition: all 1s;
+}
+
+.reg-btn:hover{
+    background-color: #c92020;
+}
+.date-imdb{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.poster{
+    display: flex!important;
+    justify-content: center!important;
+    align-items: center!important;
+}
+.head-text{
+    color: white;
+}
+
+.card{
+    margin: 10px;
+}
+.card:hover{
+    box-shadow: 0 4px 8px goldenrod, 0 6px 20px 0 goldenrod;
+
+}
+
+
+
+
+.swiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 400px;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+
+
+  
+.top{
+    position: fixed;
+    z-index: 9;
+    right: 50px;
+    bottom: 50px;
+	width: 50px;
+	height: 50px;
+	background-color: transparent;
+	color: white;
+	border: 1px solid #c92020;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+color: #c92020;
+	transition: all 1s;
+	
+}
+.top:hover{
+	background-color: #c92020;
+}
+.top:hover .fa-arrow-up{
+position: relative;
+	animation: mymove .81s infinite !important;
+    color: white;
+}
+
+@keyframes mymove {
+	from {top: -10px;}
+	to {top: 10px;}
+  }
+
+  @media only screen and (max-width: 600px) {
+ .reg-h{
+     font-size: 22px;
+ }
+  }

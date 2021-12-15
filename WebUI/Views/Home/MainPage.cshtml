@@ -31,7 +31,7 @@
 
 
       <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
-        <a class="navbar-brand" href="#"><span class="navLink">Ana Sayfa</span></a>
+        <a class="navbar-brand" href="/Home/MainPage"><span class="navLink">Ana Sayfa</span></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -40,10 +40,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item ">
-              <a class="nav-link" href="#"><span class="navLink">Hakkımızda</span> </a>
+              <a class="nav-link" href="/Home/About"><span class="navLink">Hakkımızda</span> </a>
             </li>
             <li class="nav-item ">
-              <a class="nav-link" href="#"><span class="navLink">İletişim</span> </a>
+              <a class="nav-link" href="/Home/Contact"><span class="navLink">İletişim</span> </a>
             </li>
 
 
@@ -100,15 +100,22 @@
 
 
   
-  <section class="row">
+  <section>
+    <br>
+    <br>  
+    <div class="container ">
+
+      <div  style="display: flex; justify-content: center; align-items: center;"   class="row ">
+
+        
 @foreach (var item in Model.List1)
 {
         <br>
 
 
-    <div>
+    
 
-      <div class="card" style="width: 18rem;">
+      <div class="card " style="width: 18rem;">
         <img src="@item.Poster" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title text-center">@item.Title</h5>
@@ -124,12 +131,13 @@
       </div>
 
 
-    </div>
+    
 
     <br>
 }
+      </div>
+    </div>
   </section>
-
 
 
 
@@ -138,7 +146,7 @@
 
   @* jnknjnjnjknkkkkkkkkkkkkkkkkkkkkkkkkkknk *@
 
-  <section style="background-image: url(~/film/img1.jpg)!important;" class="sec-1">
+  <section style="background-image: url(/film/img1.jpg)" class="sec-1" >
     <div class="text-center">
 
       <br>
@@ -151,11 +159,11 @@
         </h4>
         <br>
         <div class="text-center">
-          <button class="reg-btn">Hemen üye ol</button>
+        <a href="/Home/Contact">  <button class="reg-btn">İletişim</button></a>
         </div>
         <br>
       </div>
-      y
+      
     </div>
 
   </section>

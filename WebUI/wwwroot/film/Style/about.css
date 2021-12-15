@@ -1,0 +1,12 @@
+.joker{
+    width: 300px;
+}
+.joker:hover{
+    box-shadow: 0 4px 8px goldenrod, 0 6px 20px 0 goldenrod;
+
+}
+
+.text-center{
+    padding: 10px;
+}
+

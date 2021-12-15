@@ -30,7 +30,7 @@ namespace MyWebProject.Controllers
             return View();
         }
 
-        public async Task<IActionResult> MainPage(string par="comedy")
+        public async Task<IActionResult> MainPage(string par = "comedy")
         {
             var root = new List<Root1>();
             List<Search> list = new List<Search>();
@@ -47,7 +47,7 @@ namespace MyWebProject.Controllers
                         mymodel.List1 = item.Search;
                     }
 
-                   
+
                 }
                 using (var response = await httpClient.GetAsync($"http://www.omdbapi.com/?&s=popular&plot=full&apikey=393ccdcc"))
                 {
@@ -59,63 +59,26 @@ namespace MyWebProject.Controllers
                         mymodel.List2 = item.Search;
                     }
 
-                   
+
                 }
             }
-             return View(mymodel);
+            return View(mymodel);
         }
 
 
-        public async Task<IActionResult> GetProductsFromRestApi()
-        {
-            var root = new List<Root1>();
-            List<Search> list = new List<Search>();
-
-            using (var httpClient = new HttpClient())
-            {
-                using (var response = await httpClient.GetAsync("http://www.omdbapi.com/?&s=comedy&plot=full&apikey=393ccdcc"))
-                {
-                    var apiResponse = "[" + await response.Content.ReadAsStringAsync() + "]";
-
-                    root = JsonConvert.DeserializeObject<List<Root1>>(apiResponse);
-                    foreach (var item in root)
-                    {
-                        list = item.Search;
-                    }
-
-                    ViewBag.dat = root;
-                    return View(list);
-                }
-            }
-
-        }
-
-        public async Task<IActionResult> getTeam()
+      
+        
+        public IActionResult About()
         {
 
-            var client = new HttpClient();
-            var request = new HttpRequestMessage
-            {
-                Method = HttpMethod.Get,
-                RequestUri = new Uri("https://api-football-v1.p.rapidapi.com/v3/teams/statistics?league=39&season=2020&team=33"),
-                Headers =
-    {
-        { "x-rapidapi-host", "api-football-v1.p.rapidapi.com" },
-        { "x-rapidapi-key", "SIGN-UP-FOR-KEY" },
-    },
-            };
-            using (var response = await client.SendAsync(request))
-            {
-                response.EnsureSuccessStatusCode();
-                var body = await response.Content.ReadAsStringAsync();
-                ViewBag.data = body;
-                return View();
-            }
-
-
+            return View();
         }
-        //qewew
 
+        public IActionResult Contact()
+        {
+
+            return View();
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
